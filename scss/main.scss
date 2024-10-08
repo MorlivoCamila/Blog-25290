@@ -1,0 +1,294 @@
+@import "header";
+@import "footer";
+@import "variables";
+
+/*MAIN*/
+
+.divFrase{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 1170px;
+  margin-left: 6em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+  .divFrase_primerTitulo{
+    align-self: flex-start;
+    color: $violetaOscuro;
+    h1{
+      font-size: 5em;
+    }
+  }
+  .divFrase_segundoTitulo{
+    align-self: flex-end;
+    height: 100%;
+    width: 100%;
+    background-color: $violetaOscuro;
+    color: white;
+    h1{
+      align-content: center;
+      font-size: 5em;
+      text-align: end;
+      height: 2em;
+    }
+  }
+}
+
+.divFlecha{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 150px;
+
+  .divFlecha__Button{
+    button{
+      border: none;
+      background-color: white; 
+      svg{
+        color: $violeta;
+        padding: 0.5em;
+        transition: padding 0.5s;
+
+        &:hover{
+          padding: 0em;
+        }
+      }
+    }
+  }
+    
+  .divFlecha__Titulo{
+    h1{
+      font-family: "Outfit", sans-serif;
+      color: $violetaOscuro;
+      margin: 0.3em;
+      text-decoration-line: underline; 
+      cursor: pointer;
+      transition: all 0.1s;
+
+      &:hover{
+        color: $violeta;
+        text-shadow: 0px 0px 2px $violetaClaro;
+      }
+    }
+  }
+}
+    
+
+a{
+    color: $violetaOscuro;
+}
+
+a:hover{
+    color: $violeta;
+    text-shadow: 0px 0px 2px $violetaClaro;
+}
+
+.divDescBlog{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+
+    div{
+      h1{
+        font-size: 4em;
+        color: $violetaOscuro;
+        margin-bottom: 1em;
+      }
+    }
+
+    div{
+      h3{
+        font-size: 1.8em;
+        letter-spacing: -.03em;
+        line-height: 125%;
+        max-width: 700px;
+        text-align: center;
+        color: $violetaOscuro;
+        font-family: Outfit,Helvetica Neue,Helvetica,Arial,sans-serif;
+        margin-bottom: 2em;
+      }
+    }
+
+    #carouselExampleControls{
+      margin-bottom: 3em;
+
+      div{
+        div{
+          img{
+            width: 500px;
+            height: 500px;
+          }
+        }
+      }
+    }
+}
+
+.divPatrones{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: $violetaClaro;
+
+    .divPatrones__Titulo{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: $violetaOscuro;
+      padding: 2em 0em;
+      position:relative;
+      display:block;
+      margin-top: 2em;
+    }
+
+    #divPatrones__Patrones{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+
+      article{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        position:relative;
+        display:block;
+
+        div{
+          font-family: Outfit,Helvetica Neue,Helvetica,Arial,sans-serif;
+          text-align: center;
+          margin: 2em;
+          color: $violetaOscuro;
+          background-color: white;
+          border-radius: 2em;
+          padding: 1em;
+
+          h1{
+            margin: 0.5em 0em;
+          }
+
+          p{
+            margin: 1em 1em;
+            font-size: 1.3em;
+            letter-spacing: -.03em;
+            line-height: 100%;
+          }
+
+          button{
+            border: $violeta;
+            background-color: white;
+            margin: 1em 0em;
+
+            a{
+              color: white;
+              background-color: $violeta;
+              border: $violeta;
+              padding: 0.8em 1.5em;
+              transition: padding 0.2s;
+              border-radius: 0.5em;
+              text-decoration: none;
+
+              &:hover{
+                padding: 1em 1.7em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .divPatrones__Boton{
+      display: flex;
+      justify-content: center;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: $violetaOscuro;
+      margin:2em 0em;
+    }
+
+}
+
+.divFormularioImagen{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  margin: 2em 0em;
+
+  .divFormulario{
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: Outfit,Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin-right: 5em;
+
+    .divFormulario__Titulo{
+      margin: 2em 0em;
+      color: $violeta;
+    }
+
+    .divFormulario__Contacto{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      border-radius: 2em;
+      width: 47em;
+      height: 10em;
+      background-color: $violeta;
+      margin-bottom: 2em;
+
+      div{
+        #contactoNumero, #contactoEmail{
+          margin-left: 2.5em;
+          font-size: 1.5em;
+        }
+
+        #direccionCalle,#direccionLocalidad{
+          margin-right: 3.2em;
+          font-size: 1.2em;
+          color: $violetaClaro;
+        }
+      }
+    }
+
+    .divFormulario__Formulario{
+      form{
+        div{
+          label{ 
+            display: flex;
+            flex-flow: column nowrap;
+        
+            input{
+              margin-bottom: 1.5em;
+              font-size: 2em;   
+              padding: 0.5em;
+              border: none;
+              border-bottom: 0.1em solid $violetaClaro ;
+              color: $violetaClaro;
+            }
+          }
+        }
+        div{
+          button{
+            background-color: white;
+            border: none;
+            a{
+              border-radius: 0.5em;
+              padding: 1em 2.5em;
+              color: white;
+              background-color: $violeta;
+              transition: padding 0.2s;
+              text-decoration: none;
+    
+              &:hover{
+                padding: 1.1em 2.6em;
+              }
+            }
+          }
+        }
+      } 
+    }
+  }
+
+  .divImagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

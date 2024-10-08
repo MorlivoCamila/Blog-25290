@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600");
+.nav {
+  font-family: "Titillium Web";
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0.5em 1em;
+  padding: 0;
+}
+
+.nav a {
+  padding: 0.5em 0.8em;
+  color: #090028;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav a::before,
+.nav a::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: "";
+  right: 0;
+  top: 0;
+  border-top: 3px solid #371586;
+  border-right: 3px solid #090028;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #090028;
+  border-left: 3px solid #371586;
+  transform: translate(100%, -50%);
+}
+
+.nav a:hover:before,
+.nav a:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: rgb(170, 157, 231);
+}
+
+/*NO TOCAR DESDE ACA PARA*/
+.divHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 150px;
+}
+.divHeader .divHeader__Icono {
+  display: flex;
+  justify-content: center;
+}
+.divHeader .divHeader__Icono button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.divHeader .divHeader__Icono img {
+  border-radius: 2.3em;
+  box-shadow: 1px 1px 1px 1px rgba(209, 204, 238, 0.568);
+}
+.divHeader .divHeader__Menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.divFooter {
+  display: flex;
+  flex-flow: row nowrap;
+  color: white;
+  background-color: #371586;
+  height: 500px;
+}
+.divFooter .divFooter__Contactenos {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-family: Outfit, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.divFooter .divFooter__Contactenos .divFooter__Contactenos--Contacto {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: start;
+  height: 100%;
+  width: 75%;
+}
+.divFooter .divFooter__Contactenos .divFooter__Contactenos--Contacto img {
+  font-size: 3.7em;
+}
+.divFooter .divFooter__Contactenos .divFooter__Contactenos--Contacto button {
+  background-color: white;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  width: 12em;
+}
+.divFooter .divFooter__Contactenos .divFooter__Contactenos--Contacto button a {
+  color: #371586;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.divFooter .divFooter__Contactenos .divFooter__Contactenos--Parrafo {
+  width: 75%;
+}
+.divFooter .divFooter__Contactenos .divFooter__Contactenos--Parrafo p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.divFooter .divFooterLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  color: white;
+  font-family: Outfit, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.divFooter .divFooterLinks div {
+  display: flex;
+  flex-direction: column;
+}
+.divFooter .divFooterLinks div h3 {
+  width: 6em;
+  height: 2em;
+  font-size: 2.3em;
+  text-align: center;
+}
+.divFooter .divFooterLinks div a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  list-style: none;
+  text-decoration: none;
+  margin: 1em 0em;
+}
+.divFooter .divFooterLinks div a:hover {
+  color: rgba(209, 204, 238, 0.568);
+}
+
+/*MAIN*/
+.divFrase {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 1170px;
+  margin-left: 6em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.divFrase .divFrase_primerTitulo {
+  align-self: flex-start;
+  color: #090028;
+}
+.divFrase .divFrase_primerTitulo h1 {
+  font-size: 5em;
+}
+.divFrase .divFrase_segundoTitulo {
+  align-self: flex-end;
+  height: 100%;
+  width: 100%;
+  background-color: #090028;
+  color: white;
+}
+.divFrase .divFrase_segundoTitulo h1 {
+  align-content: center;
+  font-size: 5em;
+  text-align: end;
+  height: 2em;
+}
+
+.divFlecha {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 150px;
+}
+.divFlecha .divFlecha__Button button {
+  border: none;
+  background-color: white;
+}
+.divFlecha .divFlecha__Button button svg {
+  color: #371586;
+  padding: 0.5em;
+  transition: padding 0.5s;
+}
+.divFlecha .divFlecha__Button button svg:hover {
+  padding: 0em;
+}
+.divFlecha .divFlecha__Titulo h1 {
+  font-family: "Outfit", sans-serif;
+  color: #090028;
+  margin: 0.3em;
+  text-decoration-line: underline;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.divFlecha .divFlecha__Titulo h1:hover {
+  color: #371586;
+  text-shadow: 0px 0px 2px rgba(209, 204, 238, 0.568);
+}
+
+a {
+  color: #090028;
+}
+
+a:hover {
+  color: #371586;
+  text-shadow: 0px 0px 2px rgba(209, 204, 238, 0.568);
+}
+
+.divDescBlog {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+}
+.divDescBlog div h1 {
+  font-size: 4em;
+  color: #090028;
+  margin-bottom: 1em;
+}
+.divDescBlog div h3 {
+  font-size: 1.8em;
+  letter-spacing: -0.03em;
+  line-height: 125%;
+  max-width: 700px;
+  text-align: center;
+  color: #090028;
+  font-family: Outfit, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-bottom: 2em;
+}
+.divDescBlog #carouselExampleControls {
+  margin-bottom: 3em;
+}
+.divDescBlog #carouselExampleControls div div img {
+  width: 500px;
+  height: 500px;
+}
+
+.divPatrones {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: rgba(209, 204, 238, 0.568);
+}
+.divPatrones .divPatrones__Titulo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #090028;
+  padding: 2em 0em;
+  position: relative;
+  display: block;
+  margin-top: 2em;
+}
+.divPatrones #divPatrones__Patrones {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.divPatrones #divPatrones__Patrones article {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  position: relative;
+  display: block;
+}
+.divPatrones #divPatrones__Patrones article div {
+  font-family: Outfit, Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin: 2em;
+  color: #090028;
+  background-color: white;
+  border-radius: 2em;
+  padding: 1em;
+}
+.divPatrones #divPatrones__Patrones article div h1 {
+  margin: 0.5em 0em;
+}
+.divPatrones #divPatrones__Patrones article div p {
+  margin: 1em 1em;
+  font-size: 1.3em;
+  letter-spacing: -0.03em;
+  line-height: 100%;
+}
+.divPatrones #divPatrones__Patrones article div button {
+  border: #371586;
+  background-color: white;
+  margin: 1em 0em;
+}
+.divPatrones #divPatrones__Patrones article div button a {
+  color: white;
+  background-color: #371586;
+  border: #371586;
+  padding: 0.8em 1.5em;
+  transition: padding 0.2s;
+  border-radius: 0.5em;
+  text-decoration: none;
+}
+.divPatrones #divPatrones__Patrones article div button a:hover {
+  padding: 1em 1.7em;
+}
+.divPatrones .divPatrones__Boton {
+  display: flex;
+  justify-content: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #090028;
+  margin: 2em 0em;
+}
+
+.divFormularioImagen {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  margin: 2em 0em;
+}
+.divFormularioImagen .divFormulario {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: Outfit, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-right: 5em;
+}
+.divFormularioImagen .divFormulario .divFormulario__Titulo {
+  margin: 2em 0em;
+  color: #371586;
+}
+.divFormularioImagen .divFormulario .divFormulario__Contacto {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 2em;
+  width: 47em;
+  height: 10em;
+  background-color: #371586;
+  margin-bottom: 2em;
+}
+.divFormularioImagen .divFormulario .divFormulario__Contacto div #contactoNumero, .divFormularioImagen .divFormulario .divFormulario__Contacto div #contactoEmail {
+  margin-left: 2.5em;
+  font-size: 1.5em;
+}
+.divFormularioImagen .divFormulario .divFormulario__Contacto div #direccionCalle, .divFormularioImagen .divFormulario .divFormulario__Contacto div #direccionLocalidad {
+  margin-right: 3.2em;
+  font-size: 1.2em;
+  color: rgba(209, 204, 238, 0.568);
+}
+.divFormularioImagen .divFormulario .divFormulario__Formulario form div label {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.divFormularioImagen .divFormulario .divFormulario__Formulario form div label input {
+  margin-bottom: 1.5em;
+  font-size: 2em;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 0.1em solid rgba(209, 204, 238, 0.568);
+  color: rgba(209, 204, 238, 0.568);
+}
+.divFormularioImagen .divFormulario .divFormulario__Formulario form div button {
+  background-color: white;
+  border: none;
+}
+.divFormularioImagen .divFormulario .divFormulario__Formulario form div button a {
+  border-radius: 0.5em;
+  padding: 1em 2.5em;
+  color: white;
+  background-color: #371586;
+  transition: padding 0.2s;
+  text-decoration: none;
+}
+.divFormularioImagen .divFormulario .divFormulario__Formulario form div button a:hover {
+  padding: 1.1em 2.6em;
+}
+.divFormularioImagen .divImagen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=main.css.map */

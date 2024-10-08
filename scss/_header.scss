@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+@import "variables";
+
+
+.nav{
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  padding: 0;
+}
+
+.nav a {
+  padding: .5em .8em;
+  color: $violetaOscuro;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid $violeta;
+  border-right: 3px solid $violetaOscuro;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid $violetaOscuro;
+  border-left: 3px solid $violeta;
+  transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: rgb(170, 157, 231);
+}
+
+/*NO TOCAR DESDE ACA PARA*/
+
+
+.divHeader{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 150px;
+
+  .divHeader__Icono{
+    display: flex;
+    justify-content: center;
+
+    button{
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    img{
+      border-radius: 2.3em;
+      box-shadow: 1px 1px 1px 1px $violetaClaro;
+    }
+  }
+
+  .divHeader__Menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
